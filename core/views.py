@@ -7,7 +7,7 @@ from core.serializers import CategoriaSerializer, EditoraSerializer, AutorSerial
 class CategoriaViewSet(ModelViewSet):
     queryset = Categoria.objects.all()
     serializer_class = CategoriaSerializer
-    permission_classes = [IsAuthenticated] 
+    permission_classes = [IsAuthenticated]  
 
 
 class EditoraViewSet(ModelViewSet):
