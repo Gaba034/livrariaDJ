@@ -19,6 +19,7 @@ router.register(r"autores", AutorViewSet)
 router.register(r"categorias", CategoriaViewSet)
 router.register(r"editoras", EditoraViewSet)
 router.register(r"livros", LivroViewSet)
+
 urlpatterns = [
     # Admin
     path("admin/", admin.site.urls),
@@ -40,7 +41,6 @@ urlpatterns = [
     # Media
     path("api/media/", include(media_router.urls)),
     # API DRF
-    path("", include(router.urls)),
     path("api/", include(router.urls)),
 ]
 
