@@ -1,15 +1,15 @@
 from django.db import models
 
-from media.models import Image
+from uploader.models import Image
 
 from .autor import Autor
 from .categoria import Categoria
 from .editora import Editora
+
+
 class Livro(models.Model):
     titulo = models.CharField(max_length=255)
     isbn = models.CharField(max_length=32, null=True, blank=True)
-    quantidade = models.IntegerField()
-    preco = models.DecimalField(max_digits=7, decimal_places=2)
     quantidade = models.IntegerField(default=1)
     preco = models.DecimalField(max_digits=7, decimal_places=2, default=0)
     autores = models.ManyToManyField(Autor, related_name="livros")
